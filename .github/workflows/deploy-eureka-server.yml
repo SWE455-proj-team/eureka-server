@@ -1,0 +1,12 @@
+name: Deploy eureka-server
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/service-deploy.yml
+    with:
+      service_name: eureka-server
+      service_dir: .
